@@ -1,13 +1,20 @@
 import "./App.css";
 
-import { Test } from "./libs/index";
+import { Button } from "./libs/components/Button/index";
 import React from "react";
 export const App = () => {
   return (
     <React.Fragment>
-      <h1 className="text-2xl">
-        <Test name="samuel" />
-      </h1>
+      <Button
+        type="button"
+        size="small"
+        name="Click Me"
+        variant="success"
+        // style="text-red"
+        onClick={() => {
+          alert("clicked");
+        }}
+      />
     </React.Fragment>
   );
 };

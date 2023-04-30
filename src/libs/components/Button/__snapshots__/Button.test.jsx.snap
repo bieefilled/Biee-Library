@@ -1,0 +1,42 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NormalButtons > Buttons component renders correctly 1`] = `
+<button
+  className=""
+  size="medium"
+>
+  <span
+    className=""
+  >
+    Click Me
+  </span>
+</button>
+`;
+
+exports[`NormalButtons > NormalButtons component renders correctly 1`] = `
+<button
+  className=""
+/>
+`;
+
+exports[`NormalButtons > The Buttons prop works 1`] = `
+<button
+  className=""
+  onClick={[Function]}
+  size="medium"
+>
+  <span
+    className=""
+  >
+    button
+  </span>
+</button>
+`;
+
+exports[`NormalButtons > The NormalButtons prop works 1`] = `
+<button
+  className=""
+>
+  samuel
+</button>
+`;
