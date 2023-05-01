@@ -6,62 +6,55 @@ export const Button = ({
   children,
   name,
   variant,
-  //   style,
-  size,
+  style,
   ...props
 }) => {
-  const [cssStyle, setCssStyle] = useState("");
-  const [cssSize, setCsssize] = useState("");
+  const [defaultStyles, setDefaultStyles] = useState("");
+  const [styles, setStyles] = useState(false);
 
   useEffect(() => {
-    switch (size) {
-      case "small":
-        setCsssize("w-5/6");
-        break;
-      case "medium":
-        setCsssize("w-6/12");
-
-        break;
-      case "large":
-        setCsssize("w-full");
-        break;
-
-      default:
-        setCsssize("w-5/6");
-        break;
-    }
+    style === "" ? setStyles(false) : setStyles(style);
 
     switch (variant) {
       case "success":
-        setCssStyle(
-          `bg-green-600 hover:bg-400 p-4 rounded-md shadow-sm text-white +
-            ${cssSize}`
-        );
+        !styles
+          ? setDefaultStyles(
+              `bg-green-500 hover:bg-green-700 p-4 rounded-md hover:shadow-lg text-white hover:text-black`
+            )
+          : styles;
+
+        console.log(styles);
 
         break;
       case "danger":
-        setCssStyle(
-          `bg-red-600 hover:bg-red-400 p-4 rounded-md shadow-sm + ${cssSize}`
-        );
+        !styles
+          ? setDefaultStyles(
+              ` bg-red-500 hover:bg-red-700 p-4 rounded-md hover:shadow-lg `
+            )
+          : styles;
 
         break;
       case "primary":
-        setCssStyle(
-          `bg-blue-600 hover:bg-blue-400 p-4 rounded-md shadow-sm  + ${cssSize}`
-        );
-
+        !styles
+          ? setDefaultStyles(
+              `bg-blue-500 hover:bg-blue-700 p-4 rounded-md hover:shadow-lg  `
+            )
+          : styles;
         break;
 
       default:
-        cssStyle + cssSize;
         break;
     }
-  }, [variant, size]);
+  }, [defaultStyles, styles, variant, style]);
 
   return (
     <React.Fragment>
-      <button onClick={onClick} {...props} className={cssStyle}>
-        <span className={"p-8 text-white hover:text-black"}>{name}</span>
+      <button
+        onClick={onClick}
+        {...props}
+        className={styles ? styles : defaultStyles}
+      >
+        <span className={"p-4 font-[Raleway]"}>{name}</span>
         {children}
       </button>
     </React.Fragment>
@@ -69,7 +62,6 @@ export const Button = ({
 };
 
 Button.defaultProps = {
-  size: "medium",
   variant: "primary",
   name: "Button",
 };
@@ -80,7 +72,6 @@ Button.propTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func,
   style: PropTypes.string,
-  size: PropTypes.oneOf(["small", "medium", "large"]),
   variant: PropTypes.oneOf(["default", "primary", "success", "danger"]),
   //   disable: PropTypes.bool,
 };

@@ -4,7 +4,7 @@ import renderer from "react-test-renderer";
 import { describe, expect, it, test } from "vitest";
 import { Button } from "./index";
 
-describe("NormalButtons", () => {
+describe("Buttons", () => {
   it("Buttons component renders correctly", () => {
     const component = renderer.create(<Button name="Click Me" />);
     const tree = component.toJSON();
@@ -17,8 +17,7 @@ describe("NormalButtons", () => {
         onClick={() => {
           console.log("working");
         }}
-        name="button"
-        variant="default"
+        variant="primary"
 
       />
     );

@@ -16,7 +16,7 @@
 
 ---
 
-<p align="center"> A React Ui Component
+<p align="center"> A React Ui Library
     <br>
 </p>
 
@@ -106,8 +106,6 @@ Add additional notes about how to deploy this on a live system. -->
 - [Tailwind](https://Tailwind.com/)
 - [Recaptcha](https://google.com/)
 - [EmailJs](https://EmailJs.com)
-
-
 
 ## ✍️ Authors <a name = "authors"></a>
 
