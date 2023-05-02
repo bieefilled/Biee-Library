@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 export const Button = ({
-  onClick,
+  handleClick,
   children,
   name,
   variant,
@@ -50,7 +50,7 @@ export const Button = ({
   return (
     <React.Fragment>
       <button
-        onClick={onClick}
+        onClick={handleClick}
         {...props}
         className={styles ? styles : defaultStyles}
       >
@@ -70,7 +70,7 @@ Button.propTypes = {
   type: PropTypes.string,
   name: PropTypes.string,
   children: PropTypes.node,
-  onClick: PropTypes.func,
+  handleClick: PropTypes.func,
   style: PropTypes.string,
   variant: PropTypes.oneOf(["default", "primary", "success", "danger"]),
   //   disable: PropTypes.bool,
