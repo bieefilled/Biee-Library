@@ -7,7 +7,7 @@ export const App = () => {
   return (
     <React.Fragment>
       <section className="">
-        <h1 className="text-2xl items-center">Biee UIs</h1>
+        <h1 className="text-2xl items-center">Biee UIs Test Purpose</h1>
         <div>
           <Input name="full name" label="FullName" />
           <Button name="Button" type="submit" variant="success" />
