@@ -1,3 +1,3 @@
-export { Button } from "./components/Button/index";
-export { ContactForm } from "./components/Form/index";
-export { Input } from "./components/Inputs/index";
+export { Button } from "./components/index";
+export { ContactForm } from "./components/index";
+export { Input } from "./components/index";

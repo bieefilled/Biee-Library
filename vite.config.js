@@ -1,14 +1,14 @@
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import url from "url";
-const __filename = url.fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// import url from "url";
+// const __filename = url.fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/libs/index.jsx"),
+      entry: path.resolve("src", "libs/index.jsx"),
       name: "Biee UI",
       fileName: (format) => `biee-ui.${format}.js`,
     },
