@@ -14,8 +14,9 @@ exports[`Buttons > Buttons component renders correctly 1`] = `
 
 exports[`Buttons > The Buttons prop works 1`] = `
 <button
-  className="bg-blue-500 hover:bg-blue-700 p-4 rounded-md hover:shadow-lg  "
+  className="md"
   onClick={[Function]}
+  type="submit"
 >
   <span
     className="p-4 font-[Raleway]"

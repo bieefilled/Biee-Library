@@ -18,7 +18,8 @@ describe("Buttons", () => {
           console.log("working");
         }}
         variant="primary"
-
+        type="submit"
+        style={"md"}
       />
     );
     const tree = component.toJSON();
