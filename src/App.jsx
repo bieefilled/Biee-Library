@@ -1,14 +1,15 @@
 import "./App.css";
 import React from "react";
-import { ContactForm } from "./libs/components/Form/index";
+import { Input, Button } from "biee-ui";
+
 export const App = () => {
-  const FormData = (x) => console.log(x);
   return (
     <React.Fragment>
       <section className="">
         <h1>Biee UI</h1>
         <div>
-          <ContactForm FormData={FormData}  />
+          <Input name="full name" label="FullName" />
+          <Button name="button" type="submit" />
         </div>
       </section>
     </React.Fragment>

@@ -757,6 +757,20 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
+biee-ui@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/biee-ui/-/biee-ui-0.0.5.tgz#1c2f4aada6780ca9f9cfc746abc3904d98f09359"
+  integrity sha512-qI22fOjhjg/2w/ra3ol6BJc50SnPiUIhO8jaFbr0L6PcGlbOhGr2Na1RCAblzNC9tQ0jujN8maHRccLxe5vuzA==
+  dependencies:
+    "@testing-library/dom" "^9.2.0"
+    "@testing-library/react" "^14.0.0"
+    c8 "^7.13.0"
+    jsdom "^21.1.1"
+    react "^18.2.0"
+    react-dom "^18.2.0"
+    react-test-renderer "^18.2.0"
+    vitest "^0.30.1"
+
 binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
