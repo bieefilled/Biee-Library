@@ -8,7 +8,7 @@ export const App = () => {
       <section className="">
         <h1>Biee UI</h1>
         <div>
-          <ContactForm FormData={FormData} />
+          <ContactForm FormData={FormData}  />
         </div>
       </section>
     </React.Fragment>

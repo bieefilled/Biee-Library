@@ -19,17 +19,16 @@ export const Button = ({
       case "success":
         !styles
           ? setDefaultStyles(
-              `bg-green-500 hover:bg-green-700 p-4 rounded-md hover:shadow-lg text-white hover:text-black`
+              `bg-green-400 hover:bg-green-500 p-4 rounded-md hover:shadow-lg text-white hover:text-black
+                `
             )
           : styles;
-
-        console.log(styles);
 
         break;
       case "danger":
         !styles
           ? setDefaultStyles(
-              ` bg-red-500 hover:bg-red-700 p-4 rounded-md hover:shadow-lg `
+              ` bg-red-400 hover:bg-red-500 p-4 rounded-md hover:shadow-lg`
             )
           : styles;
 
@@ -37,7 +36,7 @@ export const Button = ({
       case "primary":
         !styles
           ? setDefaultStyles(
-              `bg-blue-500 hover:bg-blue-700 p-4 rounded-md hover:shadow-lg  `
+              `bg-blue-400 hover:bg-blue-500 p-4 rounded-md hover:shadow-lg`
             )
           : styles;
         break;
@@ -73,5 +72,6 @@ Button.propTypes = {
   handleClick: PropTypes.func,
   style: PropTypes.string,
   variant: PropTypes.oneOf(["default", "primary", "success", "danger"]),
+
   //   disable: PropTypes.bool,
 };

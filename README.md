@@ -20,95 +20,15 @@
     <br>
 </p>
 
-## 📝 Table of Contents
+## overview <a name = "getting_started"></a>
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
+React Ui library with Various reusable components.
 
 <!-- ## 🧐 Overview <a name = "about"></a> -->
-
-## 🏁 Getting Started <a name = "getting_started"></a>
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-- [Git](https://www.mongodb.com/)
-- [Node](https://Tailwind.com/)
-- [Recaptcha Account](https://google.com/)- for Form  
-- [EmailJs](https://EmailJs.com)- for Form
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
+## Installation
 
 ```
-
-npm/ yarn add biee-ui
-
+npm install biee-ui
 ```
 
-And repeat
-
-```
-
-until finished
-
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-The entrypoint for the component is /src/lib/index.jsx
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-
-yarn test /
-npm test
-
-```
-
-### And coding style tests
-
-to start development server run
-
-```
-
-yarn dev
-
-```
-
-<!-- ## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system. -->
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [React](https://www.mongodb.com/)
-- [Tailwind](https://Tailwind.com/)
-- [Recaptcha](https://google.com/)
-- [EmailJs](https://EmailJs.com)
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@Peter Samuel](https://github.com/bieefilled) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/bieefilled/) who participated in this project.
+## Usage
