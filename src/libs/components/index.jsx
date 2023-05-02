@@ -6,3 +6,6 @@ export { ContactForm };
 
 import { Input } from "./Inputs/index";
 export { Input };
+
+import { Select } from "./Select/index";
+export { Select };
