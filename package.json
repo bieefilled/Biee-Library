@@ -1,9 +1,9 @@
 {
   "name": "biee-ui",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
-  "description": "A React Component",
+  "description": "A reusable React component, powered by Vite and Node! This component is designed to streamline your React development process.",
   "license": "MIT",
   "author": "Samuel Peters",
   "keywords": [],
