@@ -11,7 +11,7 @@ export const App = () => {
         <div>
           <Input name="full name" label="FullName" />
           <Button name="Button" type="submit" variant="success" />
-          <Select options={["male", "female", ""]} />
+          <Select options={["male", "female", ""]} handleChange={()=>{}}/>
         </div>
       </section>
     </React.Fragment>
