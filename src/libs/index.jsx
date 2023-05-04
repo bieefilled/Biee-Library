@@ -1,4 +1,8 @@
-export { Button } from "./components/index";
-export { ContactForm } from "./components/index";
-export { Input } from "./components/index";
-export { Select } from "./components/index";
+export {
+  Button,
+  ContactForm,
+  Input,
+  Select,
+  Header,
+  Hero,
+} from "./components/index";

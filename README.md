@@ -20,7 +20,7 @@
     <br>
 </p>
 
-## overview <a name = "getting_started"></a>
+## overview
 
 React Ui library with Various reusable components.
 
