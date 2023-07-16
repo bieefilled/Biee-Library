@@ -3,7 +3,7 @@ description: New Feature Request!
 title: "[Feat]: "
 labels: ["enhancement", "good first issue"]
 assignees:
-  - @Petsamuel
+  - Petsamuel
 body:
   - type: markdown
     attributes:
