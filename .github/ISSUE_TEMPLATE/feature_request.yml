@@ -1,0 +1,32 @@
+name: Feature Request
+description: New Feature Request!
+title: "[Feat]: "
+labels: ["enhancement", "good first issue"]
+assignees:
+  - @Petsamuel
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: issue-name
+    attributes:
+      label: Issue title?
+      description: give discription about the issue
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
