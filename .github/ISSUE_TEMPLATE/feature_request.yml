@@ -1,14 +1,14 @@
-name: "💡 Feature Request"
+name: "Feature Request"
 description: Create a new ticket for a new feature request
-title: "💡 [REQUEST] - <title>"
+title: "[REQUEST] - <title>"
 labels: [
-  "Hacktober2023", "Feature"
+  "Feature", "hacktoberfest"
 ]
 body:
   - type: textarea
-    id: summary
+    id: Description
     attributes:
-      label: "Summary"
+      label: "Description"
       description: Provide a brief explanation of the feature
       placeholder: Describe in a few lines your feature request
     validations:
