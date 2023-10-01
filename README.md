@@ -22,7 +22,7 @@
 
 ## overview
 
-React Ui library with Various reusable components.
+biee-library is a React UI library with a wide variety of reusable components, including data visualization components, form components, navigation components, and layout components. The library is designed to be easy to use and well-documented, and it is supported by a strong community of contributors.
 
 <!-- ## 🧐 Overview <a name = "about"></a> -->
 ## Installation
