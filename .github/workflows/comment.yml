@@ -1,0 +1,19 @@
+name: Comment on Pull Request
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Hello there! This is an automated message from GitHub Actions. :robot:\nWe've received your pull request, and it's now in our queue for review by the repository owner or a maintainer. This process might take a little time, so we appreciate your patience.\nWhile you wait, feel free to continue working on other issues or pull requests, explore the project further, or simply take a well-deserved break.\nThank you for your valuable contribution to this project! You're making a difference! :star:'
+            })
