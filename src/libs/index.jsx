@@ -4,7 +4,6 @@ export {
   Input,
   Select,
   Header,
-  Card,
-  Nav,
+  VerticalCard,
   Hero,
 } from "./components/index";

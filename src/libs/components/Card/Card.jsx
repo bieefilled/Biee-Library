@@ -1,38 +1,45 @@
 import React from "react";
+import PropType from "prop-types";
 
-export const Card = () => {
+export const VerticalCard = ({
+  ImageURL,
+  CardTitle,
+  Hashtag,
+
+  text,
+}) => {
+  const listItems = Hashtag.map((ll) => (
+    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 ">
+      #{ll}
+    </span>
+  ));
+
   return (
     <>
       <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
         <img
           className="w-full"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxWJ2PCjRg0LMXUhgkMyNctTITPmEXu9Y3GODx1sl&s"
+          src={ImageURL}
           alt="Sunset in the mountains"
         ></img>
         <div className="px-6 py-4">
           <div className="text-gray-400 font-bold text-xl mb-2">
-            The Coldest Sunset
+            {CardTitle}
           </div>
-          <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
+          <p className="text-gray-700 text-base">{text}</p>
         </div>
-        <div className="px-6 pt-4 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 ">
-            #photography
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #travel
-          </span>
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            #winter
-          </span>
-        </div>
+        <div className="px-6 pt-4 pb-2">{listItems}</div>
       </div>
     </>
   );
 };
 
-export default Card;
+VerticalCard.propType = {
+  ImageURL: PropType.string.isRequired,
+  CardTitle: PropType.string.isRequired,
+  text: PropType.string,
+
+  Hashtag: PropType.array,
+};
+
+export default VerticalCard;
