@@ -1,49 +1,50 @@
-name: Issue and PR Automation
+name: GitHub Automation
 
 on:
-  # Trigger the workflow on issue creation, pull request creation, and issue reopening.
   issues:
-    types: [opened, reopened]
+    types:
+      - opened
   pull_request:
-    types: [opened]
+    types:
+      - opened
 
 jobs:
-  # Assign the issue or pull request to the creator.
-  assign-issue:
+  auto_assign:
     runs-on: ubuntu-latest
     steps:
-      - name: Assign issue or pull request
-        uses: actions/github-script@v5
-        with:
-          script: |
-            const creator = "${{ github.event.issue.user.login }}";
-            github.issues.addAssignees({
-              issue_number: ${{ github.event.issue.number }},
-              assignees: [creator]
-            })
+      - name: Assign the creator of the issue
+        if: github.event_name == 'issues'
+        run: |
+          creator="${{ github.event.issue.user.login }}"
+          gh issue assign ${{ github.event.issue.number }} --assignee "$creator"
 
-  # Comment on the issue or pull request.
-  comment:
+  issue_comments:
     runs-on: ubuntu-latest
     steps:
-      - name: Comment on issue or pull request
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.issues.createComment({
-              issue_number: ${{ github.event.issue.number }},
-              body: "Thanks for your contribution! Please make sure you read the CONTRIBUTING.md file to understand how to contribute to this project."
-            })
+      - name: Comment on new issue
+        if: github.event_name == 'issues'
+        run: |
+          # Replace with your desired comment
+          comment="Thank you for opening this issue. We will look into it shortly!"
+          gh issue comment ${{ github.event.issue.number }} --body "$comment"
 
-  # Add labels to the issue or pull request.
-  add-label:
+      - name: Comment on new pull request
+        if: github.event_name == 'pull_request'
+        run: |
+          # Replace with your desired comment
+          comment="Thanks for the pull request! We'll review it as soon as possible."
+          gh issue comment ${{ github.event.issue.number }} --body "$comment"
+
+  label_issues:
     runs-on: ubuntu-latest
     steps:
-      - name: Add labels to issue or pull request
-        uses: actions/github-script@v5
-        with:
-          script: |
-            github.issues.addLabels({
-              issue_number: ${{ github.event.issue.number }},
-              labels: ["hacktoberfest", "DSA", "haacktoberfest-Accepted", "priority: medium"]
-            })
+      - name: Label issues
+        if: github.event_name == 'issues'
+        run: |
+          # Replace with the labels you want to apply based on conditions
+          if [[ "${{ github.event.issue.title }}" == *"[Urgent]"* ]]; then
+            gh issue label ${{ github.event.issue.number }} add Urgent
+          fi
+          if [[ "${{ github.event.issue.body }}" == *"Needs Triage"* ]]; then
+            gh issue label ${{ github.event.issue.number }} add Needs Triage
+          fi
