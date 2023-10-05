@@ -36,6 +36,7 @@
     "jsdom": "^21.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
     "react-test-renderer": "^18.2.0",
     "vitest": "^0.30.1"
   },

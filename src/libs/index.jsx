@@ -6,3 +6,8 @@ export {
   Header,
   Hero,
 } from "./components/index";
+
+export{
+  BeeComponents,
+  Contacts
+} from "./Pages/index";
