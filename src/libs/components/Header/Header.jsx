@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import logo from "../../../assets/logo.svg";
+import {Link} from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -57,7 +58,7 @@ export const Header = () => {
                     className="block py-2 pl-3 pr-4 text-[#6F2DBD] border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#EA58A1] md:p-0 dark:text-[#EA58A1 ] md:dark:hover:text-[#EA58A1] dark:hover:bg-gray-700 dark:hover:text-[#EA58A1] md:dark:hover:bg-transparent dark:border-gray-700"
                     aria-current="page"
                   >
-                    Home
+                    <Link to="/">Home</Link>
                   </a>
                 </li>
 
@@ -66,7 +67,7 @@ export const Header = () => {
                     href="#"
                     className="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-[#EA58A1] dark:hover:bg-gray-700 dark:hover:text-[#EA58A1] md:dark:hover:bg-transparent dark:border-gray-700"
                   >
-                    Components
+                    <Link to="components">Components</Link>
                   </a>
                 </li>
                 <li>
@@ -74,7 +75,7 @@ export const Header = () => {
                     href="#"
                     className="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-[#EA58A1] dark:hover:bg-gray-700 dark:hover:text-[#EA58A1] md:dark:hover:bg-transparent dark:border-gray-700"
                   >
-                    Contact
+                    <Link to="/contact">Contact</Link>
                   </a>
                 </li>
               </ul>
