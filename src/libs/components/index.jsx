@@ -7,6 +7,9 @@ export { ContactForm };
 import { Input } from "./Inputs/index";
 export { Input };
 
+import { HorizontalCard, VarticalCard } from "./Card/index";
+export { HorizontalCard, VarticalCard };
+
 import { Select } from "./Select/index";
 export { Select };
 

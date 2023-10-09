@@ -1,7 +1,14 @@
 import "./App.css";
 import React from "react";
-import { BeeComponents, Contacts, Header, Hero } from "./libs";
-import { BrowserRouter as Router, Route , Routes} from 'react-router-dom';
+import {
+  BeeComponents,
+  Contacts,
+  Header,
+  Hero,
+  HorizontalCard,
+  VarticalCard,
+} from "./libs";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 export const App = () => {
   // const FormData = (e) => {
@@ -14,13 +21,11 @@ export const App = () => {
     //   <section className=""></section>
     // </React.Fragment>
     <Router>
-      <Header/>
+      <Header />
       <Routes>
-
-        <Route path="/" exact Component={Hero}/>
-        <Route path="/components" Component={BeeComponents}/>
-        <Route path="/contact" Component={Contacts}/>
-     
+        <Route path="/" exact Component={Hero} />
+        <Route path="/components" Component={BeeComponents} />
+        <Route path="/contact" Component={Contacts} />
       </Routes>
     </Router>
   );
